@@ -1,11 +1,33 @@
 .websitesContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
+  margin: 2rem;
 }
 
 .webpage {
-  background-color: brown;
+  border-radius: 20px;
+  box-shadow: 5px -5px 15px #12351e, -5px 5px 15px #4ad37a;
+  color: #fff;
+  font-size: 2rem;
   padding: 1rem;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.webpage:hover,
+:focus {
+  border-radius: 20px;
+  box-shadow: inset 5px -5px 15px #12351e, inset -5px 5px 15px #4ad37a;
+  transform: scale(1.2);
+}
+
+.webpage:active {
+  border-radius: 20px;
+  box-shadow: 5px -5px 15px #12351e, -5px 5px 15px #4ad37a;
+}
+
+.webpage:focus {
+  outline: none;
 }
