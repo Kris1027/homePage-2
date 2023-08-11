@@ -1,21 +1,29 @@
 .websites {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 0.5rem;
   justify-content: center;
   margin: 2rem;
 }
 
 .websites a {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.4);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: #000;
-  font-size: 2rem;
   font-weight: 700;
-  padding: 1rem;
+  padding: 0.5rem;
   text-decoration: none;
+  transition: all 0.3s;
+  z-index: 0;
+}
+
+.websites a:hover,
+.websites a:focus {
+  color: #00693d;
+  outline: none;
+  transform: scale(1.3);
+  z-index: 1;
 }
