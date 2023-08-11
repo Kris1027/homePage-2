@@ -3,7 +3,7 @@
   list-style: none;
   gap: 2rem;
   justify-content: center;
-  padding: 5rem;
+  padding: 2rem;
 }
 
 .nav a {
@@ -21,6 +21,10 @@
 
 .nav a:focus {
   outline: none;
+}
+
+.nav span {
+  margin-left: 0.7rem;
 }
 
 a:global(.active) {
