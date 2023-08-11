@@ -1,8 +1,11 @@
 .websitesContainer {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
-.icon {
-  width: 200px;
-  height: 200px;
+.webpage {
+  background-color: brown;
+  padding: 1rem;
 }

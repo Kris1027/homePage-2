@@ -4,12 +4,19 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import { webpages } from '../../data/websites';
+
 library.add(fas);
 
 function Homepage() {
   return (
     <div className={styles.websitesContainer}>
-      <FontAwesomeIcon icon='coffee' />
+      {webpages.map((webpage) => (
+        <div className={styles.webpage} key={webpage.name}>
+          {webpage.name}
+        </div>
+      ))}
+      <FontAwesomeIcon icon='fa-calculator' className={styles.icon} />
     </div>
   );
 }
