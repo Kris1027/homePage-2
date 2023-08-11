@@ -6,19 +6,20 @@ import styles from './Homepage.module.css';
 
 import { webpages } from '../../data/websites';
 import NavPage from '../components/NavPage';
+import { Outlet } from 'react-router-dom';
 // library.add(fas);
 
 function Homepage() {
   return (
     <>
       <NavPage />
-      <div className={styles.websitesContainer}>
+      <Outlet />
+      <div className={styles.websites}>
         {webpages.map((webpage) => (
           <a
             href={webpage.link}
             target='_blank'
             rel='noopener noreferrer'
-            className={styles.webpage}
             key={webpage.name}
           >
             {webpage.name}

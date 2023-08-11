@@ -1,4 +1,4 @@
-.websitesContainer {
+.websites {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
@@ -6,7 +6,7 @@
   margin: 2rem;
 }
 
-.webpage {
+.websites a {
   border-radius: 20px;
   box-shadow: 5px -5px 15px #12351e, -5px 5px 15px #4ad37a;
   color: #fff;
@@ -16,18 +16,14 @@
   transition: all 0.5s;
 }
 
-.webpage:hover,
-:focus {
+.websites a:hover {
   border-radius: 20px;
   box-shadow: inset 5px -5px 15px #12351e, inset -5px 5px 15px #4ad37a;
   transform: scale(1.2);
+  outline: none;
 }
 
-.webpage:active {
+.websites a:active {
   border-radius: 20px;
   box-shadow: 5px -5px 15px #12351e, -5px 5px 15px #4ad37a;
-}
-
-.webpage:focus {
-  outline: none;
 }

@@ -1,13 +1,22 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import styles from './NavPage.module.css';
 
 function NavPage() {
   return (
-    <div className={styles.navContainer}>
-      <Link to='/'>Home</Link>
-      <Link to='todolist'>ToDoList</Link>
-    </div>
+    <nav className={styles.nav}>
+      <ul>
+        <li>
+          <NavLink to='/'>Home</NavLink>
+        </li>
+        <li>
+          <NavLink to='/todolist'>ToDoList</NavLink>
+        </li>
+        <li>
+          <NavLink to='/notepad'>NotePad</NavLink>
+        </li>
+      </ul>
+    </nav>
   );
 }
 
