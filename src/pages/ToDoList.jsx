@@ -5,9 +5,7 @@ function ToDoList() {
   return (
     <>
       <NavPage />
-      <div className={styles.toDoList}>
-        <h1>Here I will build cool ToDoList</h1>
-      </div>
+      <div className={styles.toDoList}></div>
     </>
   );
 }

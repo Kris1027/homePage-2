@@ -5,9 +5,7 @@ function NotePad() {
   return (
     <>
       <NavPage />
-      <div className={styles.notePad}>
-        <h1>Here I will build NotePad!</h1>
-      </div>
+      <div className={styles.notePad}></div>
     </>
   );
 }

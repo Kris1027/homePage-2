@@ -8,5 +8,9 @@
 }
 
 body {
-  background: #2e844c;
+  height: 100vh;
+  background-image: url('./assets/pexels-craig-adderley-1563356.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

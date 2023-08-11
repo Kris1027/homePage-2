@@ -6,14 +6,12 @@ import styles from './Homepage.module.css';
 
 import { webpages } from '../../data/websites';
 import NavPage from '../components/NavPage';
-import { Outlet } from 'react-router-dom';
 // library.add(fas);
 
 function Homepage() {
   return (
     <>
       <NavPage />
-      <Outlet />
       <div className={styles.websites}>
         {webpages.map((webpage) => (
           <a

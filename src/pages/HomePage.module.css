@@ -7,23 +7,15 @@
 }
 
 .websites a {
-  border-radius: 20px;
-  box-shadow: 5px -5px 15px #12351e, -5px 5px 15px #4ad37a;
-  color: #fff;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #000;
   font-size: 2rem;
+  font-weight: 700;
   padding: 1rem;
   text-decoration: none;
-  transition: all 0.5s;
-}
-
-.websites a:hover {
-  border-radius: 20px;
-  box-shadow: inset 5px -5px 15px #12351e, inset -5px 5px 15px #4ad37a;
-  transform: scale(1.2);
-  outline: none;
-}
-
-.websites a:active {
-  border-radius: 20px;
-  box-shadow: 5px -5px 15px #12351e, -5px 5px 15px #4ad37a;
 }
