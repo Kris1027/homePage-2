@@ -14,19 +14,19 @@ function NavPage() {
         <li>
           <NavLink to='/'>
             <FontAwesomeIcon icon='fa-home' />
-            <span>Home</span>
+            Home
           </NavLink>
         </li>
         <li>
           <NavLink to='/todolist'>
             <FontAwesomeIcon icon='fa-list-alt' />
-            <span>ToDoList</span>
+            ToDoList
           </NavLink>
         </li>
         <li>
           <NavLink to='/notepad'>
             <FontAwesomeIcon icon='fa-sticky-note' />
-            <span>NotePad</span>
+            NotePad
           </NavLink>
         </li>
       </ul>

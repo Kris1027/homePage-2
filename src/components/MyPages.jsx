@@ -16,7 +16,7 @@ function MyPages() {
             rel='noopener noreferrer'
           >
             <FontAwesomeIcon icon='fa-gamepad' />
-            <span>Frela - The Game</span>
+            Frela - The Game
           </a>
         </li>
         <li>
@@ -26,7 +26,7 @@ function MyPages() {
             rel='noopener noreferrer'
           >
             <FontAwesomeIcon icon='fa-graduation-cap' />
-            <span>myEnglishTeacher</span>
+            myEnglishTeacher
           </a>
         </li>
       </ul>
