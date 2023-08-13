@@ -7,6 +7,7 @@ library.add(fas);
 
 import { webpages } from '../../data/websites';
 import NavPage from '../components/NavPage';
+import MyPages from '../components/MyPages';
 
 function Homepage() {
   return (
@@ -25,6 +26,7 @@ function Homepage() {
           </a>
         ))}
       </div>
+      <MyPages />
     </>
   );
 }
