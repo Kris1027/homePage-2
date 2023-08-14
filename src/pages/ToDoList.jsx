@@ -28,6 +28,10 @@ function ToDoList() {
     setTask('');
   }
 
+  function handleChangeStatus(task) {
+    setTaskData((prevData) => prevData.filter((id) => id.task !== task));
+  }
+
   return (
     <>
       <NavPage />
@@ -52,7 +56,12 @@ function ToDoList() {
                 {task.task}
               </span>
               {task.isCompleted ? (
-                <span className={styles.trashBtn}>❌</span>
+                <span
+                  onClick={() => handleChangeStatus(task.task)}
+                  className={styles.trashBtn}
+                >
+                  ❌
+                </span>
               ) : (
                 ''
               )}
