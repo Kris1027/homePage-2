@@ -28,7 +28,7 @@ function ToDoList() {
     setTask('');
   }
 
-  function handleChangeStatus(task) {
+  function handleRemoveTask(task) {
     setTaskData((prevData) => prevData.filter((id) => id.task !== task));
   }
 
@@ -57,7 +57,7 @@ function ToDoList() {
               </span>
               {task.isCompleted ? (
                 <span
-                  onClick={() => handleChangeStatus(task.task)}
+                  onClick={() => handleRemoveTask(task.task)}
                   className={styles.trashBtn}
                 >
                   ❌
