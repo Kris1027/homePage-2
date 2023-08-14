@@ -1,1 +1,45 @@
+.toDo {
+  background: rgba(255, 255, 255, 0.4);
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+}
 
+.addTask input {
+  width: 500px;
+  height: 40px;
+  font-size: 2rem;
+}
+
+.addTask button {
+  background-color: #7c238c;
+  color: #fff;
+  font-size: 2rem;
+  height: 40px;
+  width: 40px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255, 251, 0, 0.4);
+  margin: 0.3rem auto;
+  text-align: start;
+  width: 540px;
+}
+
+.trashBtn {
+  text-align: end;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.clearBtn {
+  color: #fff;
+  background-color: #7c238c;
+  font-size: 2rem;
+  padding: 0.2rem;
+  margin-left: 0.5rem;
+}
