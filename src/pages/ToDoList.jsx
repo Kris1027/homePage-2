@@ -2,24 +2,20 @@ import { useState } from 'react';
 import NavPage from '../components/NavPage';
 import styles from './ToDoList.module.css';
 
-const lists = [
-  {
-    task: 'kupić marchewkę',
-    isCompleted: true,
-  },
-  {
-    task: 'ogolić wąsa',
-    isCompleted: false,
-  },
-];
-
 function ToDoList() {
   const [task, setTask] = useState('');
-  const [taskData, setTaskData] = useState(lists);
+  const [taskData, setTaskData] = useState([]);
 
   function handleAddTask(e) {
     e.preventDefault();
+
+    const highestId = taskData.reduce(
+      (maxId, product) => (product.id > maxId ? product.id : maxId),
+      0
+    );
+
     const newTask = {
+      id: highestId + 1,
       task: task,
       isCompleted: false,
     };
@@ -28,11 +24,23 @@ function ToDoList() {
     setTask('');
   }
 
-  function handleRemoveTask(task) {
-    setTaskData((prevData) => prevData.filter((id) => id.task !== task));
+  function handleChangeStatus(id) {
+    setTaskData((prevData) =>
+      prevData.map((task) =>
+        task.id === id ? { ...task, isCompleted: !task.isCompleted } : task
+      )
+    );
+  }
+
+  function handleRemoveTask(id) {
+    setTaskData((prevData) => prevData.filter((task) => task.id !== id));
   }
 
   const amountOfTasks = taskData.length;
+
+  function handleResetBtn() {
+    setTaskData([]);
+  }
 
   return (
     <>
@@ -49,30 +57,31 @@ function ToDoList() {
         </form>
         <ul>
           {taskData.map((task) => (
-            <li className={styles.task} key={task.task}>
+            <li className={styles.task} key={task.id}>
               <span
+                onClick={() => handleChangeStatus(task.id)}
                 style={{
                   textDecoration: task.isCompleted ? 'line-through' : '',
                 }}
               >
                 {task.task}
               </span>
-              {task.isCompleted ? (
+              {task.isCompleted && (
                 <span
-                  onClick={() => handleRemoveTask(task.task)}
+                  onClick={() => handleRemoveTask(task.id)}
                   className={styles.trashBtn}
                 >
                   ❌
                 </span>
-              ) : (
-                ''
               )}
             </li>
           ))}
         </ul>
         <p>
           You have {amountOfTasks} pending tasks
-          <button className={styles.clearBtn}>Clear All</button>
+          <button onClick={handleResetBtn} className={styles.clearBtn}>
+            Clear All
+          </button>
         </p>
       </div>
     </>
