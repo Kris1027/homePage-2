@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import NavPage from '../components/NavPage';
 import styles from './ToDoList.module.css';
 
@@ -13,20 +14,45 @@ const lists = [
 ];
 
 function ToDoList() {
+  const [task, setTask] = useState('');
+  const [taskData, setTaskData] = useState(lists);
+
+  function handleAddTask(e) {
+    e.preventDefault();
+    const newTask = {
+      task: task,
+      isCompleted: false,
+    };
+
+    setTaskData((prevData) => [...prevData, newTask]);
+    setTask('');
+  }
+
   return (
     <>
       <NavPage />
       <div className={styles.toDo}>
-        <form className={styles.addTask}>
-          <input type='text' placeholder='add new task' />
-          <button>+</button>
+        <form onSubmit={handleAddTask} className={styles.addTask}>
+          <input
+            value={task}
+            onChange={(e) => setTask(e.target.value)}
+            type='text'
+            placeholder='add new task'
+          />
+          <button type='submit'>+</button>
         </form>
         <ul>
-          {lists.map((task) => (
+          {taskData.map((task) => (
             <li className={styles.task} key={task.task}>
-              {task.task}
+              <span
+                style={{
+                  textDecoration: task.isCompleted ? 'line-through' : '',
+                }}
+              >
+                {task.task}
+              </span>
               {task.isCompleted ? (
-                <span className={styles.trashBtn}>🗑️</span>
+                <span className={styles.trashBtn}>❌</span>
               ) : (
                 ''
               )}
