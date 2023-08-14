@@ -32,6 +32,8 @@ function ToDoList() {
     setTaskData((prevData) => prevData.filter((id) => id.task !== task));
   }
 
+  const amountOfTasks = taskData.length;
+
   return (
     <>
       <NavPage />
@@ -69,7 +71,7 @@ function ToDoList() {
           ))}
         </ul>
         <p>
-          You have X pending tasks
+          You have {amountOfTasks} pending tasks
           <button className={styles.clearBtn}>Clear All</button>
         </p>
       </div>
