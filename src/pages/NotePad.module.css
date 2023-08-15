@@ -7,3 +7,9 @@
   font-size: 2rem;
   font-weight: 700;
 }
+
+@media screen and (max-width: 390px) {
+  .notePad textarea {
+    width: 390px;
+  }
+}

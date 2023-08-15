@@ -31,3 +31,16 @@
 .websites span {
   margin-left: 0.3rem;
 }
+
+@media screen and (max-width: 390px) {
+  .websites {
+    gap: 0.2rem;
+    margin: 0;
+  }
+
+  .websites a {
+    font-weight: 400;
+    padding: 0.3rem;
+    border: 0.5px;
+  }
+}

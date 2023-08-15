@@ -23,6 +23,9 @@
   outline: none;
 }
 
-.pages span {
-  margin-left: 0.7rem;
+@media screen and (max-width: 390px) {
+  .pages a {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
 }

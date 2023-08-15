@@ -43,3 +43,32 @@
   padding: 0.2rem;
   margin-left: 0.5rem;
 }
+
+@media screen and (max-width: 390px) {
+  .toDo {
+    width: 390px;
+    font-size: 1rem;
+  }
+
+  .addTask input {
+    width: 310px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .addTask button {
+    font-size: 1rem;
+  }
+
+  .task {
+    width: 370px;
+  }
+
+  .trashBtn {
+    font-size: 1rem;
+  }
+
+  .clearBtn {
+    font-size: 1rem;
+  }
+}

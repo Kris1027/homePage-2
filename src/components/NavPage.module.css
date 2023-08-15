@@ -27,10 +27,17 @@
   outline: none;
 }
 
-.nav span {
-  margin-left: 0.7rem;
-}
-
 a:global(.active) {
   color: #00693d;
+}
+
+@media screen and (max-width: 390px) {
+  .nav ul {
+    gap: 0.7rem;
+    padding: 0.5rem;
+  }
+
+  .nav a {
+    font-size: 1.2rem;
+  }
 }
