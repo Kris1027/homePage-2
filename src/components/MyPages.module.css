@@ -23,7 +23,7 @@
   outline: none;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 430px) {
   .pages a {
     font-size: 0.9rem;
     font-weight: 400;

@@ -31,7 +31,7 @@ a:global(.active) {
   color: #00693d;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 430px) {
   .nav ul {
     gap: 0.7rem;
     padding: 0.5rem;
