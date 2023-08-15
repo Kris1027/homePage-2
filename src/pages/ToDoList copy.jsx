@@ -1,61 +1,46 @@
-import { useReducer, useState } from 'react';
+import { useState } from 'react';
 import NavPage from '../components/NavPage';
 import styles from './ToDoList.module.css';
 
-function taskReducer(state, action) {
-  let newTask;
-
-  switch (action.type) {
-    case 'ADD_TASK':
-      newTask = {
-        id:
-          state.reduce(
-            (maxId, task) => (task.id > maxId ? task.id : maxId),
-            0
-          ) + 1,
-        task: action.payload,
-        isCompleted: false,
-      };
-      return [...state, newTask];
-
-    case 'TOGGLE_TASK':
-      return state.map((task) =>
-        task.id === action.payload
-          ? { ...task, isCompleted: !task.isCompleted }
-          : task
-      );
-
-    case 'REMOVE_TASK':
-      return state.filter((task) => task.id !== action.payload);
-
-    case 'RESET_TASKS':
-      return [];
-  }
-}
-
 function ToDoList() {
   const [task, setTask] = useState('');
-  const [taskData, dispatch] = useReducer(taskReducer, []);
+  const [taskData, setTaskData] = useState([]);
 
   function handleAddTask(e) {
     e.preventDefault();
-    dispatch({ type: 'ADD_TASK', payload: task });
+
+    const highestId = taskData.reduce(
+      (maxId, product) => (product.id > maxId ? product.id : maxId),
+      0
+    );
+
+    const newTask = {
+      id: highestId + 1,
+      task: task,
+      isCompleted: false,
+    };
+
+    setTaskData((prevData) => [...prevData, newTask]);
     setTask('');
   }
 
-  function handleToggleTaskCompleted(id) {
-    dispatch({ type: 'TOGGLE_TASK', payload: id });
+  function handleChangeStatus(id) {
+    setTaskData((prevData) =>
+      prevData.map((task) =>
+        task.id === id ? { ...task, isCompleted: !task.isCompleted } : task
+      )
+    );
   }
 
   function handleRemoveTask(id) {
-    dispatch({ type: 'REMOVE_TASK', payload: id });
-  }
-
-  function handleResetBtn() {
-    dispatch({ type: 'RESET_TASKS' });
+    setTaskData((prevData) => prevData.filter((task) => task.id !== id));
   }
 
   const amountOfTasks = taskData.length;
+
+  function handleResetBtn() {
+    setTaskData([]);
+  }
 
   return (
     <>
@@ -74,7 +59,7 @@ function ToDoList() {
           {taskData.map((task) => (
             <li className={styles.task} key={task.id}>
               <span
-                onClick={() => handleToggleTaskCompleted(task.id)}
+                onClick={() => handleChangeStatus(task.id)}
                 style={{
                   textDecoration: task.isCompleted ? 'line-through' : '',
                 }}
