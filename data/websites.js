@@ -194,4 +194,44 @@ export const webpages = [
     link: 'https://9elements.github.io/fancy-border-radius/',
     icon: 'fa-code',
   },
+  {
+    name: 'Excalidraw',
+    link: 'https://excalidraw.com/',
+    icon: 'fa-code',
+  },
+  {
+    name: 'CSS Reset',
+    link: 'https://www.joshwcomeau.com/css/custom-css-reset/',
+    icon: 'fa-code',
+  },
+  {
+    name: 'Fungi',
+    link: 'https://fungi.com/',
+    icon: 'fa-cart-shopping',
+  },
+  {
+    name: 'McMyco',
+    link: 'https://www.mcmyco.com/en/',
+    icon: 'fa-cart-shopping',
+  },
+  {
+    name: 'Kamuflage',
+    link: 'https://kamuflage.eu/pl/',
+    icon: 'fa-cart-shopping',
+  },
+  {
+    name: 'MASS DNM',
+    link: 'https://shop.massdnm.com/',
+    icon: 'fa-cart-shopping',
+  },
+  {
+    name: 'CSS Battle',
+    link: 'https://cssbattle.dev/',
+    icon: 'fa-code',
+  },
+  {
+    name: 'Dev Community',
+    link: 'https://dev.to/',
+    icon: 'fa-code',
+  },
 ];
