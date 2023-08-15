@@ -5,7 +5,9 @@ function NotePad() {
   return (
     <>
       <NavPage />
-      <div className={styles.notePad}></div>
+      <div className={styles.notePad}>
+        <textarea cols='50' rows='10'></textarea>
+      </div>
     </>
   );
 }
