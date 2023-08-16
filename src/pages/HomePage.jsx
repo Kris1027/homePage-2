@@ -9,6 +9,7 @@ import { webpages } from '../../data/websites';
 import NavPage from '../components/NavPage';
 import MyPages from '../components/MyPages';
 import { useState } from 'react';
+import Weather from '../components/Weather';
 
 function Homepage() {
   const [selectedSort, setSelectedSort] = useState('default');
@@ -53,6 +54,7 @@ function Homepage() {
         </select>
       </label>
       <MyPages />
+      <Weather />
     </>
   );
 }
