@@ -40,8 +40,8 @@ export default function Weather() {
 
   return (
     <div className={styles.Weather}>
-      <h2>Weather in {location.name}</h2>
-      <p>Temperature: {current.temp_c}°C</p>
+      <h2>{location.name}</h2>
+      <p>{current.temp_c}°C</p>
     </div>
   );
 }
