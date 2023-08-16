@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
-  margin: 2rem;
+  margin: 0.5rem 0;
 }
 
 .websites a {
