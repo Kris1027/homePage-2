@@ -1,15 +1,17 @@
-.Weather {
+.weather {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
   color: #fff;
   font-size: 1.5rem;
   margin-left: auto;
 }
 
+.weather img {
+  margin: 0;
+}
+
 @media screen and (max-width: 430px) {
-  .Weather {
-    font-size: 0.5rem;
-    align-items: start;
+  .weather {
+    font-size: 0.7rem;
   }
 }

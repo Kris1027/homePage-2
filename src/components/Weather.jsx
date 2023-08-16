@@ -1,47 +1,62 @@
+import { useEffect, useState } from 'react';
+import Loader from './Loader';
+import Error from './Error';
+
 import styles from './Weather.module.css';
 
-import { useEffect, useState } from 'react';
-
 export default function Weather() {
-  const [weatherData, setWeatherData] = useState(null);
-  //   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [weather, setWeather] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  useEffect(() => {
-    async function getWeather() {
+  useEffect(function () {
+    async function fetchWeather() {
       const APIkey = '22d77a699e8145a7a8f95222231608';
 
       try {
+        setIsLoading(true);
+        setError('');
         const res = await fetch(
           `http://api.weatherapi.com/v1/current.json?key=${APIkey}&q=Rotterdam&aqi=no`
         );
-        // setIsLoading(true);
+
+        if (!res.ok)
+          throw new Error('Something went wrong with fetching weather');
+
         const data = await res.json();
-        setWeatherData(data);
-      } catch (error) {
-        console.error('An error occured while fetching weather data:', error);
-        setError('Failed to fetch weather data');
-        // setIsLoading(false);
+        if (data.Response === 'False') throw new Error('Weather not found');
+
+        setWeather(data);
+        setError('');
+      } catch (err) {
+        if (err.name !== 'AbortError') {
+          setError(err.message);
+        }
+      } finally {
+        setIsLoading(false);
       }
     }
 
-    getWeather();
+    fetchWeather();
   }, []);
 
+  if (isLoading) {
+    return <Loader />;
+  }
+
   if (error) {
-    return <div>Error: {error}</div>;
+    return <Error />;
   }
 
-  if (!weatherData) {
-    return <div>Loading...</div>;
+  if (weather) {
+    const { location, current } = weather;
+    console.log(weather);
+    return (
+      <div className={styles.weather}>
+        {location.name}: {current.temp_c}°C
+        <img src={current.condition.icon} alt='weather' />
+      </div>
+    );
   }
-
-  const { location, current } = weatherData;
-
-  return (
-    <div className={styles.Weather}>
-      <h2>{location.name}</h2>
-      <p>{current.temp_c}°C</p>
-    </div>
-  );
+  return null;
 }
