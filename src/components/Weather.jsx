@@ -17,7 +17,7 @@ export default function Weather() {
         setIsLoading(true);
         setError('');
         const res = await fetch(
-          `http://api.weatherapi.com/v1/current.json?key=${APIkey}&q=Rotterdam&aqi=no`
+          `https://api.weatherapi.com/v1/current.json?key=${APIkey}&q=Rotterdam&aqi=no`
         );
 
         if (!res.ok)
@@ -50,7 +50,6 @@ export default function Weather() {
 
   if (weather) {
     const { location, current } = weather;
-    console.log(weather);
     return (
       <div className={styles.weather}>
         {location.name}: {current.temp_c}°C
