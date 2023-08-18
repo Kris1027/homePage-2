@@ -1,5 +1,12 @@
+import styles from './Error.module.css';
+
 function Error() {
-  return <div>Something went wrong</div>;
+  return (
+    <>
+      <div className={styles.error}>Weather Error</div>
+      <br />
+    </>
+  );
 }
 
 export default Error;

@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Gilda+Display);
+
+.error {
+  color: rgb(255, 234, 0);
+  text-align: center;
+  font-family: 'Gilda Display', serif;
+  font-size: 3rem;
+  font-style: italic;
+  text-align: center;
+  width: 100px;
+  height: 60px;
+  line-height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -50px;
+  right: 0;
+  animation: noise 2s linear infinite;
+  overflow: default;
+}
+
+@keyframes noise {
+  0%,
+  3%,
+  5%,
+  42%,
+  44%,
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  4.3% {
+    opacity: 1;
+    transform: scaleY(1.7);
+  }
+  43% {
+    opacity: 1;
+    transform: scaleX(1.5);
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .error {
+    font-size: 2rem;
+    top: 450px;
+    left: 250px;
+  }
+}
