@@ -7,8 +7,6 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 library.add(fas);
 
-import Weather from '../components/Weather';
-
 function NavPage() {
   return (
     <nav className={styles.nav}>
@@ -32,7 +30,6 @@ function NavPage() {
           </NavLink>
         </li>
       </ul>
-      <Weather />
     </nav>
   );
 }

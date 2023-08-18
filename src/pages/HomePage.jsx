@@ -9,6 +9,7 @@ import { webpages } from '../../data/websites';
 import NavPage from '../components/NavPage';
 import MyPages from '../components/MyPages';
 import { useState } from 'react';
+import Weather from '../components/Weather';
 
 function Homepage() {
   const [selectedSort, setSelectedSort] = useState('default');
@@ -41,6 +42,8 @@ function Homepage() {
           </a>
         ))}
       </div>
+      <MyPages />
+      <Weather />
       <label className={styles.sort}>
         <h2>Sort by</h2>
         <select
@@ -52,7 +55,6 @@ function Homepage() {
           <option value='icon'>icon</option>
         </select>
       </label>
-      <MyPages />
     </>
   );
 }

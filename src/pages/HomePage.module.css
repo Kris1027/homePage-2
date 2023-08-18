@@ -1,9 +1,10 @@
 .websites {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
   justify-content: center;
-  margin: 0.5rem 0;
+  gap: 0.5rem;
+  width: 1024px;
+  margin: 0 auto;
 }
 
 .websites a {
@@ -47,6 +48,7 @@
   .websites {
     gap: 0.2rem;
     margin: 0;
+    width: 428px;
   }
 
   .websites a {
