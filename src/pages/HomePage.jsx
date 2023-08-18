@@ -1,15 +1,18 @@
+import { useState } from 'react';
+
 import styles from './Homepage.module.css';
+
+import { webpages } from '../../data/websites';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 library.add(fas);
 
-import { webpages } from '../../data/websites';
 import NavPage from '../components/NavPage';
 import MyPages from '../components/MyPages';
-import { useState } from 'react';
 import Weather from '../components/Weather';
+import Sorter from '../components/Sorter';
 
 function Homepage() {
   const [selectedSort, setSelectedSort] = useState('default');
@@ -44,17 +47,11 @@ function Homepage() {
       </div>
       <MyPages />
       <Weather />
-      <label className={styles.sort}>
-        <h2>Sort by</h2>
-        <select
-          value={selectedSort}
-          onChange={(e) => setSelectedSort(e.target.value)}
-        >
-          <option value='default'>default</option>
-          <option value='name'>name</option>
-          <option value='icon'>icon</option>
-        </select>
-      </label>
+      <Sorter
+        sortedWebpages={sortedWebpages}
+        selectedSort={selectedSort}
+        setSelectedSort={setSelectedSort}
+      />
     </>
   );
 }

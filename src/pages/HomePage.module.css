@@ -33,17 +33,6 @@
   margin-left: 0.3rem;
 }
 
-.sort {
-  display: flex;
-  justify-content: center;
-  color: #fff;
-}
-
-.sort select {
-  background: rgba(255, 255, 255, 0.4);
-  margin-left: 0.5rem;
-}
-
 @media screen and (max-width: 430px) {
   .websites {
     gap: 0.2rem;
