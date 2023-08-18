@@ -1,4 +1,4 @@
-import { useReducer, useState } from 'react';
+import { useEffect, useReducer, useState } from 'react';
 import NavPage from '../components/NavPage';
 import styles from './ToDoList.module.css';
 
@@ -35,7 +35,16 @@ function taskReducer(state, action) {
 
 function ToDoList() {
   const [task, setTask] = useState('');
-  const [taskData, dispatch] = useReducer(taskReducer, []);
+  const [taskData, dispatch] = useReducer(taskReducer, [], initialData);
+
+  function initialData() {
+    const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    return savedTasks;
+  }
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(taskData));
+  }, [taskData]);
 
   function handleAddTask(e) {
     e.preventDefault();
