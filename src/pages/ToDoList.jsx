@@ -48,6 +48,7 @@ function ToDoList() {
 
   function handleAddTask(e) {
     e.preventDefault();
+    if (task === '') return;
     dispatch({ type: 'ADD_TASK', payload: task });
     setTask('');
   }
@@ -64,7 +65,7 @@ function ToDoList() {
     dispatch({ type: 'RESET_TASKS' });
   }
 
-  const amountOfTasks = taskData.length;
+  const pendingTasks = taskData.filter((task) => task.isCompleted === false);
 
   return (
     <>
@@ -100,7 +101,7 @@ function ToDoList() {
           ))}
         </ul>
         <p>
-          You have {amountOfTasks} pending tasks
+          You have <strong>{pendingTasks.length}</strong> pending tasks
           <button onClick={handleResetBtn} className={styles.clearBtn}>
             Clear All
           </button>

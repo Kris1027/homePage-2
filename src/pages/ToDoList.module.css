@@ -19,6 +19,11 @@
   list-style: none;
 }
 
+.toDo p {
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+
 .active {
   font-weight: 100;
   opacity: 0.4;
