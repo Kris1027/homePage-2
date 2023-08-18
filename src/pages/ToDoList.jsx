@@ -81,19 +81,17 @@ function ToDoList() {
         </form>
         <ul>
           {taskData.map((task) => (
-            <li className={styles.task} key={task.id}>
+            <li key={task.id}>
               <span
+                className={`${task.isCompleted ? styles.active : ''}`}
                 onClick={() => handleToggleTaskCompleted(task.id)}
-                style={{
-                  textDecoration: task.isCompleted ? 'line-through' : '',
-                }}
               >
                 {task.task}
               </span>
               {task.isCompleted && (
                 <span
                   onClick={() => handleRemoveTask(task.id)}
-                  className={styles.trashBtn}
+                  className={styles.removeBtn}
                 >
                   ❌
                 </span>
