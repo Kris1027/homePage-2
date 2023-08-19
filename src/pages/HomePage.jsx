@@ -15,7 +15,7 @@ import Weather from '../components/Weather';
 import Sorter from '../components/Sorter';
 
 function Homepage() {
-  const [selectedSort, setSelectedSort] = useState('default');
+  const [selectedSort, setSelectedSort] = useState('name');
 
   const sortedWebpages = [...webpages];
 
