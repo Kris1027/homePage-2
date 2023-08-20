@@ -1,13 +1,13 @@
-#My personal home page with my links, to do list and notepad. I used this page daily
+<h1>My personal home page with my links, to do list and notepad. I used this page daily</h1>
 
-#used technology
+<h2>Used technology</h2>
 - Vite
 - HTML
 - CSS
 - JavaScript
 - React
 
-#ScreenShots
+<h2>ScreenShots</h2>
 
 ![screenshot](https://github.com/Kris1027/homePage-2/assets/120410235/ea6fb6b2-cca2-4385-8b09-9cab44151b5e)
 
