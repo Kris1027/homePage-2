@@ -1,8 +1,14 @@
-# React + Vite
+#My personal home page with my links, to do list and notepad. I used this page daily
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#used technology
+- Vite
+- HTML
+- CSS
+- JavaScript
+- React
 
-Currently, two official plugins are available:
+#ScreenShots
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![screenshot](https://github.com/Kris1027/homePage-2/assets/120410235/ea6fb6b2-cca2-4385-8b09-9cab44151b5e)
+
+![screenshot (1)](https://github.com/Kris1027/homePage-2/assets/120410235/5f4039c3-7342-4c0b-af26-dd0dc210b757)
