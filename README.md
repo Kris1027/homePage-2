@@ -1,11 +1,13 @@
 <h1>My personal home page with my links, to do list and notepad. I used this page daily</h1>
 
 <h2>Used technology</h2>
-- Vite
-- HTML
-- CSS
-- JavaScript
-- React
+<ul>
+  <li>Vite</li>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>React</li>
+</ul>
 
 <h2>ScreenShots</h2>
 
