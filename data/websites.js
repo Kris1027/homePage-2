@@ -234,4 +234,49 @@ export const webpages = [
     link: 'https://dev.to/',
     icon: 'fa-code',
   },
+  {
+    name: 'DaisyUI',
+    link: 'https://daisyui.com/',
+    icon: 'fa-code',
+  },
+  {
+    name: 'Emoji as a Favicon',
+    link: 'https://css-tricks.com/emoji-as-a-favicon/',
+    icon: 'fa-code',
+  },
+  {
+    name: 'Pexels',
+    link: 'https://www.pexels.com/pl-pl/',
+    icon: 'fa-code',
+  },
+  {
+    name: 'Normalize.css',
+    link: 'https://necolas.github.io/normalize.css/',
+    icon: 'fa-code',
+  },
+  {
+    name: 'Solid Jobs',
+    link: 'https://solid.jobs/offers/it',
+    icon: 'fa-briefcase',
+  },
+  {
+    name: 'The Protocol',
+    link: 'https://theprotocol.it/',
+    icon: 'fa-briefcase',
+  },
+  {
+    name: 'CSS Loaders',
+    link: 'https://css-loaders.com/',
+    icon: 'fa-briefcase',
+  },
+  {
+    name: 'BlendIcons',
+    link: 'https://blendicons.com/',
+    icon: 'fa-code',
+  },
+  {
+    name: 'Coddy',
+    link: 'https://coddy.tech/',
+    icon: 'fa-code',
+  },
 ];
