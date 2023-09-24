@@ -140,11 +140,6 @@ export const webpages = [
     icon: 'fa-code',
   },
   {
-    name: 'CSSTricks',
-    link: 'https://css-tricks.com/',
-    icon: 'fa-code',
-  },
-  {
     name: 'Netlify',
     link: 'https://www.netlify.com/',
     icon: 'fa-code',
@@ -152,46 +147,6 @@ export const webpages = [
   {
     name: 'GoFile',
     link: 'https://gofile.io/welcome',
-    icon: 'fa-code',
-  },
-  {
-    name: 'FontAwesome',
-    link: 'https://fontawesome.com/',
-    icon: 'fa-code',
-  },
-  {
-    name: 'Fontello',
-    link: 'https://fontello.com/',
-    icon: 'fa-code',
-  },
-  {
-    name: 'IconScout',
-    link: 'https://iconscout.com/',
-    icon: 'fa-code',
-  },
-  {
-    name: 'IconMonstr',
-    link: 'https://iconmonstr.com/',
-    icon: 'fa-code',
-  },
-  {
-    name: 'CSSMatic',
-    link: 'https://www.cssmatic.com/',
-    icon: 'fa-code',
-  },
-  {
-    name: 'Neumorphism',
-    link: 'https://neumorphism.io/#e0e0e0',
-    icon: 'fa-code',
-  },
-  {
-    name: 'Glassmorphism',
-    link: 'https://hype4.academy/tools/glassmorphism-generator',
-    icon: 'fa-code',
-  },
-  {
-    name: 'FancyBorderRadius',
-    link: 'https://9elements.github.io/fancy-border-radius/',
     icon: 'fa-code',
   },
   {
@@ -277,6 +232,51 @@ export const webpages = [
   {
     name: 'Coddy',
     link: 'https://coddy.tech/',
+    icon: 'fa-code',
+  },
+  {
+    name: 'React Icons',
+    link: 'https://react-icons.github.io/react-icons',
+    icon: 'fa-code',
+  },
+  {
+    name: 'Tailwind',
+    link: 'https://tailwindcss.com/',
+    icon: 'fa-code',
+  },
+  {
+    name: 'React',
+    link: 'https://react.dev/',
+    icon: 'fa-code',
+  },
+  {
+    name: 'React Router',
+    link: 'https://reactrouter.com/en/main',
+    icon: 'fa-code',
+  },
+  {
+    name: 'React Redux',
+    link: 'https://react-redux.js.org/',
+    icon: 'fa-code',
+  },
+  {
+    name: 'Vite',
+    link: 'https://vitejs.dev/',
+    icon: 'fa-code',
+  },
+  {
+    name: 'Next.js',
+    link: 'https://nextjs.org/',
+    icon: 'fa-code',
+  },
+  {
+    name: 'TypeScript',
+    link: 'https://www.typescriptlang.org/',
+    icon: 'fa-code',
+  },
+  {
+    name: 'JavaScript',
+    link: 'https://www.javascript.com/',
     icon: 'fa-code',
   },
 ];
